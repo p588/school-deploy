@@ -2,6 +2,9 @@ import os
 from .settings import *
 from .settings import BASE_DIR
 
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.environ['secret']
+
 ALLOWED_HOSTS=[os.environ['WEBSITE_HOSTNAME']]
 CSRF_TRUSTED_ORIGINS=['http://'+os.environ['WEDSITE_HOSTNAME']]
 DEBUG=False
